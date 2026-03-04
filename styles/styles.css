@@ -1,0 +1,218 @@
+/* ==================================================
+   RESET & BASE
+================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #000;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* ==================================================
+   UTILITIES
+================================================== */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* ==================================================
+   HEADER (TRANSPARENT)
+================================================== */
+.site-header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  background: transparent;
+  padding: 20px 0;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  max-height: 60px;
+}
+
+.nav a {
+  color: #ffffff;
+  margin-left: 24px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* ==================================================
+   HERO SECTION
+================================================== */
+.hero {
+  position: relative;
+  height: 100vh;
+  background-image: url("../images/hero-section.jpeg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.75)
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.hero-tagline {
+  font-size: 1.3rem;
+}
+
+.pastor-name {
+  margin-top: 20px;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* ==================================================
+   SERVICE TIMES
+================================================== */
+.services {
+  background: #111;
+  padding: 60px 0;
+}
+
+.service-times {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 30px;
+}
+
+.service-box {
+  text-align: center;
+}
+
+/* ==================================================
+   MISSION & VISION
+================================================== */
+.mission-preview {
+  padding: 60px 0;
+  background: #000;
+}
+
+.vision-title {
+  margin-top: 40px;
+}
+
+/* ==================================================
+   GLOBAL REACH
+================================================== */
+.global-reach {
+  background: #111;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 30px;
+  border: 1px solid #fff;
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* ==================================================
+   FOOTER
+================================================== */
+.footer {
+  background: #000;
+  padding: 60px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+.footer-address,
+.footer-contact {
+  margin-bottom: 15px;
+  opacity: 0.85;
+}
+
+.social-links {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-links img {
+  width: 22px;
+  height: 22px;
+  filter: invert(1);
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.social-links img:hover {
+  opacity: 1;
+}
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .service-times {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
