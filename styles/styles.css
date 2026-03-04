@@ -14,163 +14,265 @@ color:white;
 /* ================= HEADER ================= */
 
 .site-header{
+
 position:absolute;
 top:0;
+left:0;
 width:100%;
-z-index:10;
-padding:25px 40px;
+z-index:20;
+
+padding:30px 60px;
+
 }
 
-.header-content{
+/* inner alignment */
+
+.header-inner{
+
 display:flex;
-justify-content:space-between;
 align-items:center;
-width:100%;
+justify-content:space-between;
+
 }
 
+/* logo block */
 
-/* LOGO MUCH BIGGER */
+.logo-area{
+
+display:flex;
+align-items:center;
+
+}
+
+/* BIGGER LOGO */
 
 .logo{
-height:95px;
+
+height:105px;
+
 }
 
+/* navigation */
 
-/* NAVIGATION */
+.nav{
+
+display:flex;
+align-items:center;
+
+}
 
 .nav a{
+
 color:white;
-margin-left:35px;
+
+margin-left:40px;
+
 text-decoration:none;
+
 font-size:14px;
-font-weight:500;
+
 letter-spacing:1px;
+
+font-weight:600;
+
 }
 
 .nav a:hover{
+
 opacity:0.7;
+
 }
 
 
 /* ================= HERO ================= */
 
 .hero{
+
 position:relative;
+
 height:100vh;
+
 background:url("../images/hero-section.jpeg") center/cover no-repeat;
+
 display:flex;
+
 align-items:center;
+
 justify-content:center;
+
 text-align:center;
+
 }
 
 .hero-overlay{
+
 position:absolute;
+
 inset:0;
+
 background:rgba(0,0,0,0.65);
+
 }
 
 .hero-content{
+
 position:relative;
+
 z-index:2;
+
 max-width:900px;
+
 }
 
 
-/* SMALL TITLE */
+/* small title */
 
 .hero-small{
-color:#e8d7a5;
+
+color:#e6d7a6;
+
 letter-spacing:3px;
+
 font-size:14px;
-margin-bottom:20px;
+
+margin-bottom:25px;
+
+font-weight:600;
+
 }
 
 
-/* MAIN TITLE */
+/* main title */
 
 .hero-title{
+
 font-size:140px;
+
 font-weight:800;
+
 line-height:1;
+
 margin-bottom:25px;
+
 }
 
 
-/* GOLD TEXT */
+/* gold line */
 
 .hero-highlight{
-color:#e8d7a5;
-font-size:32px;
+
+color:#e6d7a6;
+
+font-size:34px;
+
 font-weight:700;
+
 margin-bottom:20px;
+
 }
 
 
-/* SUPPORT TEXT */
+/* text */
 
 .hero-text{
+
 font-size:24px;
+
 margin-bottom:35px;
+
 }
 
 
-/* BUTTON */
+/* button */
 
 .hero-button{
+
 border:1px solid white;
-padding:15px 40px;
+
+padding:16px 42px;
+
 text-decoration:none;
+
 color:white;
+
 font-weight:600;
+
 letter-spacing:1px;
+
 }
 
 .hero-button:hover{
+
 background:white;
+
 color:black;
+
 }
 
 
 /* ================= SERVICES ================= */
 
 .services{
+
 background:#111;
+
 padding:80px 0;
+
 text-align:center;
+
 }
 
 .container{
+
 width:90%;
+
 max-width:1200px;
+
 margin:auto;
+
 }
 
 .service-times{
+
 display:flex;
+
 justify-content:center;
+
 gap:80px;
+
 margin-top:30px;
+
 }
 
 
 /* ================= FOOTER ================= */
 
 .footer{
+
 padding:60px 0;
+
 text-align:center;
+
 background:black;
+
 font-size:14px;
+
 }
 
 .social{
+
 margin-top:20px;
+
 }
 
 .social a{
+
 color:white;
+
 margin:0 10px;
+
 text-decoration:none;
+
 }
 
 
@@ -178,25 +280,42 @@ text-decoration:none;
 
 @media(max-width:900px){
 
+.site-header{
+
+padding:20px 30px;
+
+}
+
 .logo{
-height:70px;
+
+height:75px;
+
 }
 
 .hero-title{
+
 font-size:70px;
+
 }
 
 .hero-highlight{
+
 font-size:22px;
+
 }
 
 .hero-text{
+
 font-size:18px;
+
 }
 
 .service-times{
+
 flex-direction:column;
+
 gap:30px;
+
 }
 
 }
