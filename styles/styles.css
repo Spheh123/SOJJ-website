@@ -1,218 +1,202 @@
-/* ==================================================
-   RESET & BASE
-================================================== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #000;
-  color: #fff;
-  line-height: 1.6;
+body{
+font-family:Arial, Helvetica, sans-serif;
+background:black;
+color:white;
 }
 
-/* ==================================================
-   UTILITIES
-================================================== */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
+
+/* ================= HEADER ================= */
+
+.site-header{
+position:absolute;
+top:0;
+width:100%;
+z-index:10;
+padding:25px 40px;
 }
 
-h2 {
-  text-align: center;
-  margin-bottom: 20px;
+.header-content{
+display:flex;
+justify-content:space-between;
+align-items:center;
+width:100%;
 }
 
-/* ==================================================
-   HEADER (TRANSPARENT)
-================================================== */
-.site-header {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 10;
-  background: transparent;
-  padding: 20px 0;
+
+/* LOGO MUCH BIGGER */
+
+.logo{
+height:95px;
 }
 
-.header-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+
+/* NAVIGATION */
+
+.nav a{
+color:white;
+margin-left:35px;
+text-decoration:none;
+font-size:14px;
+font-weight:500;
+letter-spacing:1px;
 }
 
-.logo {
-  max-height: 60px;
+.nav a:hover{
+opacity:0.7;
 }
 
-.nav a {
-  color: #ffffff;
-  margin-left: 24px;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 0.5px;
+
+/* ================= HERO ================= */
+
+.hero{
+position:relative;
+height:100vh;
+background:url("../images/hero-section.jpeg") center/cover no-repeat;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
 }
 
-.nav a:hover {
-  text-decoration: underline;
+.hero-overlay{
+position:absolute;
+inset:0;
+background:rgba(0,0,0,0.65);
 }
 
-/* ==================================================
-   HERO SECTION
-================================================== */
-.hero {
-  position: relative;
-  height: 100vh;
-  background-image: url("../images/hero-section.jpeg");
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+.hero-content{
+position:relative;
+z-index:2;
+max-width:900px;
 }
 
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    rgba(0, 0, 0, 0.6),
-    rgba(0, 0, 0, 0.75)
-  );
+
+/* SMALL TITLE */
+
+.hero-small{
+color:#e8d7a5;
+letter-spacing:3px;
+font-size:14px;
+margin-bottom:20px;
 }
 
-.hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 900px;
-  padding: 20px;
+
+/* MAIN TITLE */
+
+.hero-title{
+font-size:140px;
+font-weight:800;
+line-height:1;
+margin-bottom:25px;
 }
 
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 15px;
+
+/* GOLD TEXT */
+
+.hero-highlight{
+color:#e8d7a5;
+font-size:32px;
+font-weight:700;
+margin-bottom:20px;
 }
 
-.hero-tagline {
-  font-size: 1.3rem;
+
+/* SUPPORT TEXT */
+
+.hero-text{
+font-size:24px;
+margin-bottom:35px;
 }
 
-.pastor-name {
-  margin-top: 20px;
-  font-size: 1rem;
-  opacity: 0.9;
+
+/* BUTTON */
+
+.hero-button{
+border:1px solid white;
+padding:15px 40px;
+text-decoration:none;
+color:white;
+font-weight:600;
+letter-spacing:1px;
 }
 
-/* ==================================================
-   SERVICE TIMES
-================================================== */
-.services {
-  background: #111;
-  padding: 60px 0;
+.hero-button:hover{
+background:white;
+color:black;
 }
 
-.service-times {
-  display: flex;
-  justify-content: center;
-  gap: 60px;
-  margin-top: 30px;
+
+/* ================= SERVICES ================= */
+
+.services{
+background:#111;
+padding:80px 0;
+text-align:center;
 }
 
-.service-box {
-  text-align: center;
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
 }
 
-/* ==================================================
-   MISSION & VISION
-================================================== */
-.mission-preview {
-  padding: 60px 0;
-  background: #000;
+.service-times{
+display:flex;
+justify-content:center;
+gap:80px;
+margin-top:30px;
 }
 
-.vision-title {
-  margin-top: 40px;
+
+/* ================= FOOTER ================= */
+
+.footer{
+padding:60px 0;
+text-align:center;
+background:black;
+font-size:14px;
 }
 
-/* ==================================================
-   GLOBAL REACH
-================================================== */
-.global-reach {
-  background: #111;
-  padding: 60px 0;
-  text-align: center;
+.social{
+margin-top:20px;
 }
 
-.btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 30px;
-  border: 1px solid #fff;
-  color: #fff;
-  text-decoration: none;
+.social a{
+color:white;
+margin:0 10px;
+text-decoration:none;
 }
 
-.btn:hover {
-  background: #fff;
-  color: #000;
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+
+.logo{
+height:70px;
 }
 
-/* ==================================================
-   FOOTER
-================================================== */
-.footer {
-  background: #000;
-  padding: 60px 0;
-  text-align: center;
-  font-size: 14px;
+.hero-title{
+font-size:70px;
 }
 
-.footer-address,
-.footer-contact {
-  margin-bottom: 15px;
-  opacity: 0.85;
+.hero-highlight{
+font-size:22px;
 }
 
-.social-links {
-  margin-top: 25px;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+.hero-text{
+font-size:18px;
 }
 
-.social-links img {
-  width: 22px;
-  height: 22px;
-  filter: invert(1);
-  opacity: 0.8;
-  transition: opacity 0.3s ease;
+.service-times{
+flex-direction:column;
+gap:30px;
 }
 
-.social-links img:hover {
-  opacity: 1;
-}
-
-/* ==================================================
-   RESPONSIVE
-================================================== */
-@media (max-width: 768px) {
-  .header-content {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .service-times {
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .hero h1 {
-    font-size: 2rem;
-  }
 }
