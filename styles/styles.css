@@ -1,3 +1,5 @@
+/* GLOBAL */
+
 *{
 margin:0;
 padding:0;
@@ -5,316 +7,386 @@ box-sizing:border-box;
 }
 
 body{
-font-family:Arial, Helvetica, sans-serif;
-background:black;
-color:white;
+font-family: 'Segoe UI', Arial, sans-serif;
+line-height:1.6;
+color:#222;
 }
-
 
 /* HEADER */
 
-.site-header{
-
+.header{
 position:absolute;
 top:0;
 left:0;
 width:100%;
-z-index:50;
-
-padding:35px 80px;
-
-}
-
-
-/* header layout */
-
-.header-wrapper{
-
 display:flex;
-align-items:center;
 justify-content:space-between;
-
-}
-
-
-/* logo */
-
-.logo{
-
-height:200px;
-
-}
-
-
-/* navigation */
-
-.nav{
-
-display:flex;
 align-items:center;
-
+padding:20px 80px;
+z-index:10;
 }
 
-.nav a{
+.logo img{
+height:200px;
+}
 
-margin-left:40px;
-
-text-decoration:none;
-
+.header nav a{
 color:white;
-
-font-size:14px;
-
+text-decoration:none;
+margin-left:30px;
 font-weight:600;
-
-letter-spacing:1.5px;
-
+letter-spacing:1px;
+font-size:14px;
 }
 
-.nav a:hover{
-
-opacity:0.7;
-
+.header nav a:hover{
+color:#e5d29c;
 }
-
 
 
 /* HERO */
 
 .hero{
-
-position:relative;
-
 height:100vh;
-
 background:url("../images/hero-section.jpeg") center/cover no-repeat;
-
+position:relative;
 display:flex;
-
 align-items:center;
-
 justify-content:center;
-
 text-align:center;
-
+color:white;
 }
 
 .hero-overlay{
-
 position:absolute;
-
-inset:0;
-
-background:rgba(0,0,0,0.65);
-
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
 }
 
 .hero-content{
-
 position:relative;
-
 z-index:2;
-
-max-width:900px;
-
 }
 
-
-
-/* top text */
-
-.hero-small{
-
-color:#e7d6a4;
-
+.hero-content h4{
 letter-spacing:3px;
-
-font-size:15px;
-
-margin-bottom:25px;
-
-font-weight:600;
-
-}
-
-
-/* main title */
-
-.hero-title{
-
-font-size:140px;
-
-font-weight:800;
-
-line-height:1;
-
-margin-bottom:25px;
-
-}
-
-
-/* gold title */
-
-.hero-highlight{
-
-color:#e7d6a4;
-
-font-size:34px;
-
-font-weight:700;
-
+color:#e5d29c;
 margin-bottom:20px;
-
 }
 
-
-/* description */
-
-.hero-text{
-
-font-size:24px;
-
-margin-bottom:40px;
-
+.hero-content h1{
+font-size:120px;
+font-weight:800;
+margin-bottom:10px;
 }
 
+.hero-content h3{
+font-size:32px;
+color:#e5d29c;
+margin-bottom:15px;
+}
 
-/* button */
+.hero-content p{
+font-size:20px;
+margin-bottom:35px;
+}
 
-.hero-button{
-
+.hero-btn{
+padding:15px 40px;
 border:1px solid white;
-
-padding:16px 44px;
-
 text-decoration:none;
-
 color:white;
-
 font-weight:600;
-
-letter-spacing:1px;
-
 }
 
-.hero-button:hover{
-
+.hero-btn:hover{
 background:white;
-
 color:black;
-
 }
 
+
+/* WORSHIP SECTION */
+
+.worship{
+background:white;
+padding:100px 0;
+}
+
+.worship-container{
+width:1200px;
+margin:auto;
+display:flex;
+gap:60px;
+align-items:center;
+}
+
+.worship-image img{
+width:100%;
+height:350px;
+object-fit:cover;
+}
+
+.worship-text h5{
+letter-spacing:2px;
+color:#777;
+margin-bottom:10px;
+}
+
+.worship-text h2{
+font-size:36px;
+margin-bottom:20px;
+}
+
+.worship-text p{
+color:#555;
+margin-bottom:25px;
+}
+
+.btn{
+border:1px solid black;
+padding:12px 25px;
+text-decoration:none;
+color:black;
+font-weight:600;
+}
+
+.btn:hover{
+background:black;
+color:white;
+}
 
 
 /* SERVICES */
 
 .services{
+display:grid;
+grid-template-columns:1fr 1fr 1fr;
+}
 
-background:#111;
-
-padding:80px 0;
-
+.service-box{
+padding:70px;
 text-align:center;
-
+color:white;
 }
 
-.container{
+.service-box h1{
+font-size:80px;
+}
 
-width:90%;
+.service-box p{
+font-size:20px;
+}
 
-max-width:1200px;
+.service-box h3{
+margin:20px 0;
+}
 
+.blue{
+background:#1c4d7d;
+}
+
+.dark{
+background:#555;
+}
+
+.light{
+background:#ddd;
+color:#333;
+}
+
+
+/* EXPRESSIONS */
+
+.expressions{
+background:#2b2b2b;
+color:white;
+padding:100px 0;
+}
+
+.expressions-container{
+width:1200px;
 margin:auto;
-
-}
-
-.service-times{
-
 display:flex;
-
-justify-content:center;
-
-gap:80px;
-
-margin-top:30px;
-
+justify-content:space-between;
+gap:100px;
 }
 
+.exp-left h5{
+letter-spacing:2px;
+color:#e5d29c;
+}
+
+.exp-left h2{
+font-size:40px;
+margin-top:20px;
+}
+
+.exp-right p{
+margin-bottom:30px;
+}
+
+
+/* MINISTRIES */
+
+.ministries{
+padding:100px 0;
+background:#f6f6f6;
+text-align:center;
+}
+
+.ministry-grid{
+width:1200px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
+margin-top:50px;
+}
+
+.card{
+background:white;
+padding-bottom:30px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card img{
+width:100%;
+height:250px;
+object-fit:cover;
+}
+
+.card h3{
+margin-top:20px;
+}
+
+.card p{
+padding:10px 20px;
+color:#555;
+}
+
+
+/* NSPPD */
+
+.nsppd{
+padding:100px 0;
+background:white;
+}
+
+.nsppd-container{
+width:1200px;
+margin:auto;
+display:flex;
+align-items:center;
+gap:80px;
+}
+
+.nsppd-text h5{
+letter-spacing:2px;
+color:#888;
+margin-bottom:10px;
+}
+
+.nsppd-text h2{
+font-size:36px;
+margin-bottom:20px;
+}
+
+
+/* PASTORS */
+
+.pastors{
+background:#111;
+color:white;
+padding:100px 0;
+display:flex;
+align-items:center;
+justify-content:center;
+position:relative;
+overflow:hidden;
+}
+
+.slider{
+display:flex;
+transition:transform 0.5s ease;
+width:200%;
+}
+
+.slide{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:60px;
+width:100%;
+padding:0 120px;
+}
+
+.slide img{
+height:450px;
+}
+
+.pastor-text{
+background:white;
+color:#333;
+padding:40px;
+max-width:400px;
+}
+
+.arrow{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+background:none;
+border:none;
+color:white;
+font-size:30px;
+cursor:pointer;
+}
+
+.left{
+left:30px;
+}
+
+.right{
+right:30px;
+}
 
 
 /* FOOTER */
 
-.footer{
-
-padding:60px 0;
-
-text-align:center;
-
-background:black;
-
-font-size:14px;
-
-}
-
-.social{
-
-margin-top:20px;
-
-}
-
-.social a{
-
+footer{
+background:#0d2b4d;
 color:white;
-
-margin:0 10px;
-
-text-decoration:none;
-
+text-align:center;
+padding:80px 20px;
 }
 
-
-
-/* MOBILE */
-
-@media(max-width:900px){
-
-.site-header{
-
-padding:20px 40px;
-
+footer form{
+margin-top:30px;
 }
 
-.logo{
-
-height:70px;
-
+footer input{
+display:block;
+margin:10px auto;
+padding:12px;
+width:300px;
+border:none;
 }
 
-.hero-title{
-
-font-size:70px;
-
+footer button{
+padding:12px 30px;
+background:#e5d29c;
+border:none;
+font-weight:600;
+cursor:pointer;
 }
 
-.hero-highlight{
-
-font-size:22px;
-
-}
-
-.hero-text{
-
-font-size:18px;
-
-}
-
-.service-times{
-
-flex-direction:column;
-
+.footer-bottom{
+margin-top:50px;
+display:flex;
+justify-content:center;
 gap:30px;
-
-}
-
+flex-wrap:wrap;
 }
