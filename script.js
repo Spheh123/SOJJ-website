@@ -1,40 +1,22 @@
-let slider = document.querySelector('.slider');
+const menuToggle = document.querySelector(".menu-toggle");
+const siteNav = document.querySelector(".site-nav");
+const navLinks = document.querySelectorAll(".site-nav a");
+const yearElement = document.querySelector("#year");
 
-let slides = document.querySelectorAll('.slide');
-
-let index = 0;
-
-function showSlide(){
-
-slider.style.transform =
-`translateX(-${index * 100}%)`;
-
+if (yearElement) {
+  yearElement.textContent = new Date().getFullYear();
 }
 
-function nextSlide(){
+if (menuToggle && siteNav) {
+  menuToggle.addEventListener("click", () => {
+    const isOpen = siteNav.classList.toggle("is-open");
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+  });
 
-index++;
-
-if(index >= slides.length){
-
-index = 0;
-
-}
-
-showSlide();
-
-}
-
-function prevSlide(){
-
-index--;
-
-if(index < 0){
-
-index = slides.length - 1;
-
-}
-
-showSlide();
-
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      siteNav.classList.remove("is-open");
+      menuToggle.setAttribute("aria-expanded", "false");
+    });
+  });
 }
