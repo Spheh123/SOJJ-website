@@ -84,6 +84,7 @@ input {
   width: 100%;
   z-index: 50;
   padding-top: 10px;
+  transition: background 0.25s ease, box-shadow 0.25s ease, padding 0.25s ease;
 }
 
 .nav-shell {
@@ -92,6 +93,17 @@ input {
   justify-content: space-between;
   gap: 1.3rem;
   padding: 0.4rem 1rem;
+}
+
+.site-header.is-scrolled {
+  padding-top: 0;
+  background: rgba(0, 0, 0, 0.92);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.22);
+}
+
+.site-header.is-scrolled .nav-shell {
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
 }
 
 .brand {

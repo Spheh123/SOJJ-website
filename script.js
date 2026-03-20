@@ -1,6 +1,7 @@
 const menuToggle = document.querySelector(".menu-toggle");
 const siteNav = document.querySelector(".site-nav");
 const yearElement = document.querySelector("#year");
+const siteHeader = document.querySelector(".site-header");
 
 if (yearElement) {
   yearElement.textContent = new Date().getFullYear();
@@ -20,6 +21,15 @@ if (menuToggle && siteNav) {
   siteNav.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", closeMenu);
   });
+}
+
+if (siteHeader) {
+  const updateHeaderState = () => {
+    siteHeader.classList.toggle("is-scrolled", window.scrollY > 24);
+  };
+
+  updateHeaderState();
+  window.addEventListener("scroll", updateHeaderState, { passive: true });
 }
 
 document.querySelectorAll("[data-leadership-slider]").forEach((slider) => {
