@@ -176,12 +176,12 @@ input {
 
 .home-hero-content h1 {
   margin-top: 0.65rem;
-  font-size: clamp(4.5rem, 11vw, 8.3rem);
+  font-size: clamp(3rem, 8vw, 5.2rem);
 }
 
 .home-hero-content h2 {
   font-family: "Montserrat", sans-serif;
-  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-size: clamp(1.35rem, 3vw, 2.4rem);
   font-weight: 800;
   color: #ffe49d;
   text-transform: uppercase;
@@ -190,7 +190,7 @@ input {
 .hero-statement {
   margin-top: 1.35rem;
   font-family: "Montserrat", sans-serif;
-  font-size: clamp(1.3rem, 3vw, 2rem);
+  font-size: clamp(1rem, 2vw, 1.35rem);
   font-weight: 800;
   text-transform: uppercase;
 }
@@ -272,7 +272,7 @@ input {
 .dual-callout-left h2,
 .dual-callout-content h2 {
   margin: 0.75rem 0 1rem;
-  font-size: clamp(2rem, 4vw, 3.6rem);
+  font-size: clamp(1.35rem, 2.7vw, 2.15rem);
 }
 
 .dark-kicker {
@@ -296,7 +296,7 @@ input {
 
 .service-box h3 {
   font-family: "Montserrat", sans-serif;
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 900;
 }
 
@@ -367,7 +367,7 @@ input {
   position: relative;
   margin: 0.5rem 0 2rem;
   padding-left: 1rem;
-  font-size: clamp(2rem, 4vw, 3.6rem);
+  font-size: clamp(1.45rem, 2.8vw, 2.2rem);
 }
 
 .ministries-intro h2::before {
@@ -392,7 +392,7 @@ input {
 .ministry-tile h3 {
   margin: 1rem 0 0.7rem;
   font-family: "Montserrat", sans-serif;
-  font-size: 2rem;
+  font-size: 1.3rem;
   font-weight: 800;
 }
 
@@ -458,7 +458,7 @@ input {
 }
 
 .inner-hero-content h1 {
-  font-size: clamp(3rem, 7vw, 5.6rem);
+  font-size: clamp(1.9rem, 4.6vw, 3.4rem);
   text-transform: uppercase;
 }
 
@@ -481,7 +481,7 @@ input {
 }
 
 .blue-intro-grid h2 {
-  font-size: clamp(2.5rem, 5vw, 4.4rem);
+  font-size: clamp(1.6rem, 3.3vw, 2.7rem);
   text-transform: uppercase;
 }
 
@@ -529,7 +529,7 @@ input {
 .values-panel h2 {
   margin-bottom: 2rem;
   text-align: center;
-  font-size: 3rem;
+  font-size: 2rem;
   text-transform: uppercase;
 }
 
@@ -598,7 +598,7 @@ input {
 
 .leader-copy-card h2 {
   margin-bottom: 2rem;
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
   text-transform: uppercase;
 }
 
@@ -606,7 +606,7 @@ input {
 .leader-copy-card a {
   font-family: Georgia, serif;
   color: #0b3160;
-  font-size: clamp(1.25rem, 2.2vw, 2rem);
+  font-size: clamp(1rem, 1.7vw, 1.45rem);
   line-height: 1.55;
 }
 
@@ -677,7 +677,7 @@ input {
 }
 
 .contact-heading h2 {
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-size: clamp(1.7rem, 3vw, 2.5rem);
 }
 
 .contact-cards {
@@ -695,7 +695,7 @@ input {
 .contact-card h3 {
   margin-bottom: 1rem;
   font-family: "Montserrat", sans-serif;
-  font-size: 2rem;
+  font-size: 1.2rem;
   font-weight: 800;
 }
 
@@ -713,7 +713,7 @@ input {
 
 .footer-copy h2 {
   margin-bottom: 0.9rem;
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(1.45rem, 2.4vw, 1.95rem);
 }
 
 .footer-form {
@@ -752,8 +752,166 @@ input {
 }
 
 .footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
   padding: 1rem 0 2.4rem;
   border-top: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.footer-meta-links,
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer-meta-links a,
+.footer-socials a {
+  color: var(--white);
+}
+
+.footer-social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  background: #f3d38b;
+  color: #0f3160 !important;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.footer-brand-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1.5rem;
+}
+
+.footer-brand-row img {
+  width: 150px;
+}
+
+.footer-columns {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+  padding: 1rem 0 2.25rem;
+}
+
+.footer-column h3 {
+  margin-bottom: 1rem;
+  color: var(--sky);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.footer-column a,
+.footer-column p {
+  display: block;
+  margin-bottom: 0.85rem;
+  font-size: 1rem;
+}
+
+.footer-divider {
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.give-options-section,
+.community-section,
+.legal-section {
+  padding: 6rem 0;
+  background: #fff;
+}
+
+.give-options-grid,
+.community-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.give-option-card,
+.community-card,
+.legal-card {
+  padding: 2.2rem;
+  background: #fff;
+  border: 1px solid rgba(18, 49, 94, 0.12);
+  box-shadow: 0 16px 34px rgba(15, 49, 96, 0.08);
+}
+
+.give-option-card h3,
+.community-card h3,
+.legal-card h2 {
+  margin-bottom: 0.9rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.18rem;
+  font-weight: 800;
+}
+
+.give-option-card p,
+.community-card p,
+.legal-card p,
+.legal-card li {
+  color: #4c4c4c;
+}
+
+.give-option-card .line-button,
+.community-card .line-button {
+  margin-top: 1.5rem;
+}
+
+.community-card form {
+  display: grid;
+  gap: 0.85rem;
+  margin-top: 1.4rem;
+}
+
+.community-card input,
+.community-card textarea {
+  width: 100%;
+  min-height: 50px;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(18, 49, 94, 0.18);
+  background: #fff;
+}
+
+.community-card textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.community-card button {
+  min-height: 50px;
+  border: 0;
+  background: var(--navy);
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.community-card-note {
+  margin-top: 0.85rem;
+  font-size: 0.96rem;
+}
+
+.legal-card {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.legal-card ul {
+  padding-left: 1.2rem;
+  margin-top: 1rem;
 }
 
 @media (max-width: 1080px) {
@@ -800,6 +958,17 @@ input {
   .leader-copy-card {
     max-width: none;
   }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-columns,
+  .give-options-grid,
+  .community-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media (max-width: 720px) {
@@ -818,5 +987,11 @@ input {
 
   .map-pill {
     font-size: 0.72rem;
+  }
+
+  .footer-columns,
+  .give-options-grid,
+  .community-grid {
+    grid-template-columns: 1fr;
   }
 }
