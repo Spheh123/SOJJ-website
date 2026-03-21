@@ -60,3 +60,85 @@ document.querySelectorAll("[data-leadership-slider]").forEach((slider) => {
 
   showSlide(0);
 });
+
+const adminAccessPage = document.querySelector("[data-admin-access]");
+const adminTriggers = document.querySelectorAll("[data-admin-trigger]");
+
+if (adminTriggers.length) {
+  let clickCount = 0;
+  let lastClickTime = 0;
+  const hiddenRoute = "elroi-console.html";
+
+  adminTriggers.forEach((trigger) => {
+    trigger.addEventListener("click", (event) => {
+      const now = Date.now();
+      clickCount = now - lastClickTime < 1400 ? clickCount + 1 : 1;
+      lastClickTime = now;
+
+      if (clickCount >= 5) {
+        event.preventDefault();
+        window.location.href = hiddenRoute;
+      }
+    });
+  });
+}
+
+if (adminAccessPage) {
+  const form = adminAccessPage.querySelector("[data-admin-form]");
+  const passwordInput = adminAccessPage.querySelector("[data-admin-password]");
+  const errorMessage = adminAccessPage.querySelector("[data-admin-error]");
+  const loginPanel = adminAccessPage.querySelector("[data-admin-login]");
+  const timerPanel = adminAccessPage.querySelector("[data-admin-timer]");
+  const logoutButton = adminAccessPage.querySelector("[data-admin-logout]");
+  const storageKey = "sojj_admin_timer_unlocked";
+  const hashedPasscode = "342348c58fc6415bbb9ee29930abc2bd4cf458e67581a5353f3513944cb28168";
+
+  const setUnlockedState = (isUnlocked) => {
+    loginPanel?.classList.toggle("admin-hidden", isUnlocked);
+    timerPanel?.classList.toggle("is-visible", isUnlocked);
+    timerPanel?.classList.toggle("admin-hidden", !isUnlocked);
+  };
+
+  const hashValue = async (value) => {
+    const encoded = new TextEncoder().encode(value);
+    const digest = await crypto.subtle.digest("SHA-256", encoded);
+    return Array.from(new Uint8Array(digest))
+      .map((byte) => byte.toString(16).padStart(2, "0"))
+      .join("");
+  };
+
+  const unlock = () => {
+    sessionStorage.setItem(storageKey, "unlocked");
+    if (errorMessage) {
+      errorMessage.textContent = "";
+    }
+    setUnlockedState(true);
+  };
+
+  if (sessionStorage.getItem(storageKey) === "unlocked") {
+    setUnlockedState(true);
+  } else {
+    setUnlockedState(false);
+  }
+
+  form?.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const submittedValue = passwordInput?.value.trim() ?? "";
+    const submittedHash = await hashValue(submittedValue);
+
+    if (submittedHash === hashedPasscode) {
+      unlock();
+      form.reset();
+      return;
+    }
+
+    if (errorMessage) {
+      errorMessage.textContent = "That passcode is not correct.";
+    }
+  });
+
+  logoutButton?.addEventListener("click", () => {
+    sessionStorage.removeItem(storageKey);
+    setUnlockedState(false);
+  });
+}

@@ -962,6 +962,137 @@ input {
   margin-top: 1rem;
 }
 
+.admin-shell {
+  padding: 8.5rem 0 5rem;
+  min-height: 100vh;
+  background:
+    linear-gradient(180deg, rgba(18, 49, 94, 0.96), rgba(10, 18, 32, 0.98)),
+    url("../images/hero-section.jpeg") center/cover no-repeat;
+}
+
+.admin-panel,
+.timer-panel {
+  max-width: 1040px;
+  margin: 0 auto;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.22);
+}
+
+.admin-panel {
+  max-width: 640px;
+  padding: 2.4rem;
+}
+
+.admin-panel h1,
+.timer-panel h1 {
+  margin-bottom: 0.8rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(1.7rem, 3vw, 2.5rem);
+  font-weight: 800;
+}
+
+.admin-panel p,
+.timer-panel p {
+  color: #505050;
+}
+
+.admin-form {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.6rem;
+}
+
+.admin-form label {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.admin-form input {
+  min-height: 54px;
+  padding: 0.95rem 1rem;
+  border: 1px solid rgba(18, 49, 94, 0.16);
+  border-radius: 12px;
+}
+
+.admin-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.admin-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0.9rem 1.4rem;
+  border: 0;
+  border-radius: 12px;
+  background: var(--navy);
+  color: var(--white);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.admin-button-secondary {
+  background: #e8edf5;
+  color: var(--navy);
+}
+
+.admin-note,
+.admin-error {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+
+.admin-error {
+  color: #b42318;
+}
+
+.timer-panel {
+  display: none;
+  padding: 1.4rem;
+}
+
+.timer-panel.is-visible {
+  display: block;
+}
+
+.timer-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.timer-toolbar-copy {
+  max-width: 680px;
+}
+
+.timer-frame-wrap {
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid rgba(18, 49, 94, 0.12);
+  background: #0c1422;
+}
+
+.timer-frame {
+  width: 100%;
+  min-height: 78vh;
+  border: 0;
+  background: #0c1422;
+}
+
+.admin-hidden {
+  display: none;
+}
+
 @media (max-width: 1080px) {
   .menu-toggle {
     display: inline-block;
@@ -1018,6 +1149,11 @@ input {
   .give-options-grid,
   .community-grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .timer-toolbar {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
@@ -1088,5 +1224,22 @@ input {
   .dual-callout-right {
     min-height: 520px;
     border-width: 8px;
+  }
+
+  .admin-shell {
+    padding-top: 7.5rem;
+  }
+
+  .admin-panel,
+  .timer-panel {
+    border-radius: 18px;
+  }
+
+  .admin-panel {
+    padding: 1.5rem;
+  }
+
+  .timer-frame {
+    min-height: 70vh;
   }
 }

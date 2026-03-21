@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Streams of Joy Johannesburg | Elroi Console</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body data-admin-access>
+  <header class="site-header is-scrolled">
+    <div class="header-inner">
+      <a class="brand" href="index.html"><img src="images/SOJJ-Monochrome-Logo-White.png" alt="Streams of Joy Johannesburg logo"></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span><span class="sr-only">Toggle navigation</span></button>
+      <nav class="site-nav" id="site-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="admin-shell">
+    <section class="container">
+      <div class="admin-panel" data-admin-login>
+        <p class="section-kicker dark-kicker">Private Access</p>
+        <h1>Service Timer Console</h1>
+        <p>This page gives private access to the service timer. Use the admin passcode to unlock it before service.</p>
+        <form class="admin-form" data-admin-form>
+          <label for="admin-passcode">Admin Passcode</label>
+          <input id="admin-passcode" type="password" data-admin-password placeholder="Enter passcode" required>
+          <div class="admin-actions">
+            <button class="admin-button" type="submit">Unlock Timer</button>
+            <a class="admin-button admin-button-secondary" href="index.html">Back To Site</a>
+          </div>
+          <p class="admin-error" data-admin-error aria-live="polite"></p>
+        </form>
+        <p class="admin-note">This page is hidden from the main website. Share the access method and passcode only with trusted team members.</p>
+      </div>
+
+      <div class="timer-panel admin-hidden" data-admin-timer>
+        <div class="timer-toolbar">
+          <div class="timer-toolbar-copy">
+            <p class="section-kicker dark-kicker">Unlocked</p>
+            <h1>Church Timer Console</h1>
+            <p>If the timer does not display inside this page, use the button to open it directly in a new tab.</p>
+          </div>
+          <div class="admin-actions">
+            <a class="admin-button" href="https://sojjchurchtimer.netlify.app/" target="_blank" rel="noreferrer">Open Timer In New Tab</a>
+            <button class="admin-button admin-button-secondary" type="button" data-admin-logout>Lock Page</button>
+          </div>
+        </div>
+        <div class="timer-frame-wrap">
+          <iframe class="timer-frame" src="https://sojjchurchtimer.netlify.app/" title="SOJJ Church Timer"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
