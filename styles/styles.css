@@ -5,6 +5,8 @@
   --white: #ffffff;
   --text: #2b2b2b;
   --line: rgba(0, 0, 0, 0.18);
+  --gold: #f3d38b;
+  --panel: rgba(255, 255, 255, 0.96);
 }
 
 * {
@@ -17,7 +19,9 @@ body {
   color: var(--text);
   font-family: "Poppins", sans-serif;
   line-height: 1.55;
-  background: #f8f8f8;
+  background:
+    radial-gradient(circle at top right, rgba(117, 170, 198, 0.1), transparent 24%),
+    linear-gradient(180deg, #fbfbfa 0%, #f5f5f3 100%);
 }
 
 img {
@@ -59,12 +63,13 @@ input {
   width: 100%;
   z-index: 50;
   padding: 0.75rem 0;
-  transition: background 0.25s ease, box-shadow 0.25s ease;
+  transition: background 0.25s ease, box-shadow 0.25s ease, backdrop-filter 0.25s ease;
 }
 
 .site-header.is-scrolled {
   background: rgba(0, 0, 0, 0.94);
   box-shadow: 0 14px 30px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(10px);
 }
 
 .header-inner {
@@ -78,7 +83,7 @@ input {
 }
 
 .brand img {
-  width: 150px;
+  width: 162px;
   height: auto;
 }
 
@@ -94,6 +99,7 @@ input {
   font-size: 0.95rem;
   font-weight: 700;
   text-transform: uppercase;
+  transition: color 0.2s ease, opacity 0.2s ease;
 }
 
 .site-nav a.active,
@@ -133,7 +139,9 @@ input {
 .hero-shade {
   position: absolute;
   inset: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56));
+  background:
+    linear-gradient(180deg, rgba(5, 8, 14, 0.38) 0%, rgba(5, 8, 14, 0.66) 100%),
+    radial-gradient(circle at center, rgba(18, 49, 94, 0.16), transparent 48%);
 }
 
 .home-hero-content,
@@ -208,6 +216,16 @@ input {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.outline-button:hover,
+.line-button:hover,
+.solid-dark-button:hover,
+.give-button:hover,
+.footer-form button:hover,
+.community-card button:hover {
+  transform: translateY(-2px);
 }
 
 .outline-button {
@@ -229,12 +247,14 @@ input {
 .solid-dark-button {
   background: #2a2a2a;
   color: var(--white);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.12);
 }
 
 .give-button {
   border-radius: 999px;
   background: #e02f2f;
   color: var(--white);
+  box-shadow: 0 18px 34px rgba(224, 47, 47, 0.24);
 }
 
 .disabled-give-button {
@@ -292,6 +312,7 @@ input {
   padding: 3rem 2rem;
   text-align: center;
   color: var(--white);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
 .service-box h3 {
@@ -345,6 +366,7 @@ input {
   font-size: 0.9rem;
   font-weight: 700;
   text-transform: uppercase;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.16);
 }
 
 .map-pill-canada { top: 28%; left: 20%; }
@@ -383,6 +405,7 @@ input {
 .ministry-photo {
   height: 320px;
   background: linear-gradient(rgba(0,0,0,0.22), rgba(0,0,0,0.22)), url("../images/hero-section.jpeg") center/cover no-repeat;
+  border-radius: 16px 16px 0 0;
 }
 
 .ministry-photo-two {
@@ -394,6 +417,10 @@ input {
   font-family: "Montserrat", sans-serif;
   font-size: 1.3rem;
   font-weight: 800;
+}
+
+.ministry-tile {
+  padding-bottom: 1rem;
 }
 
 .nsppd-grid {
@@ -425,6 +452,7 @@ input {
   min-height: 640px;
   border: 12px solid #0f3160;
   background: url("../images/give.png") center/cover no-repeat;
+  box-shadow: 0 24px 50px rgba(15, 49, 96, 0.18);
 }
 
 .dual-callout-overlay {
@@ -524,6 +552,7 @@ input {
 .values-panel {
   padding: 3rem;
   background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 22px 50px rgba(18, 49, 94, 0.12);
 }
 
 .values-panel h2 {
@@ -559,6 +588,7 @@ input {
   display: none;
   grid-template-columns: 0.92fr 1.08fr;
   align-items: center;
+  gap: 1.5rem;
 }
 
 .leader-slide.is-active {
@@ -566,10 +596,12 @@ input {
 }
 
 .leader-photo {
-  min-height: 860px;
+  min-height: 900px;
+  width: 100%;
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: contain;
+  filter: drop-shadow(0 22px 30px rgba(0, 0, 0, 0.24));
 }
 
 .leader-photo-jerry {
@@ -594,6 +626,7 @@ input {
   max-width: 700px;
   padding: 3rem;
   background: #f8f8f8;
+  box-shadow: 0 26px 54px rgba(0, 0, 0, 0.14);
 }
 
 .leader-copy-card h2 {
@@ -633,6 +666,11 @@ input {
   color: var(--white);
   font-size: 4rem;
   cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.slider-arrow:hover {
+  opacity: 0.75;
 }
 
 .slider-arrow-left { left: 0; }
@@ -725,6 +763,7 @@ input {
   min-height: 52px;
   padding: 0.9rem 1rem;
   border: 0;
+  border-radius: 6px;
 }
 
 .footer-form button {
@@ -735,6 +774,7 @@ input {
   font-family: "Montserrat", sans-serif;
   font-weight: 800;
   cursor: pointer;
+  border-radius: 6px;
 }
 
 .footer-links {
@@ -784,6 +824,8 @@ input {
   font-family: "Montserrat", sans-serif;
   font-size: 0.8rem;
   font-weight: 800;
+  border-radius: 6px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
 }
 
 .footer-brand-row {
@@ -845,6 +887,7 @@ input {
   background: #fff;
   border: 1px solid rgba(18, 49, 94, 0.12);
   box-shadow: 0 16px 34px rgba(15, 49, 96, 0.08);
+  border-radius: 20px;
 }
 
 .give-option-card h3,
@@ -881,6 +924,7 @@ input {
   padding: 0.9rem 1rem;
   border: 1px solid rgba(18, 49, 94, 0.18);
   background: #fff;
+  border-radius: 10px;
 }
 
 .community-card textarea {
@@ -897,6 +941,7 @@ input {
   font-weight: 700;
   text-transform: uppercase;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 .community-card-note {
@@ -930,6 +975,8 @@ input {
     gap: 1rem;
     padding: 1rem;
     background: rgba(0, 0, 0, 0.95);
+    border-radius: 16px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.24);
   }
 
   .site-nav.is-open {
@@ -952,7 +999,7 @@ input {
   }
 
   .leader-photo {
-    min-height: 520px;
+    min-height: 680px;
   }
 
   .leader-copy-card {
@@ -973,12 +1020,13 @@ input {
 
 @media (max-width: 720px) {
   .brand img {
-    width: 110px;
+    width: 126px;
   }
 
   .home-hero-content,
   .inner-hero-content {
-    padding-top: 10rem;
+    padding-top: 9.5rem;
+    padding-bottom: 4rem;
   }
 
   .service-boxes {
@@ -993,5 +1041,49 @@ input {
   .give-options-grid,
   .community-grid {
     grid-template-columns: 1fr;
+  }
+
+  .home-hero {
+    min-height: 88vh;
+    background-position: center;
+  }
+
+  .worship-row,
+  .expressions-section,
+  .ministries-home,
+  .dual-callout-section,
+  .mission-section,
+  .values-section,
+  .salvation-main,
+  .contact-section,
+  .give-options-section,
+  .community-section,
+  .legal-section {
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+  }
+
+  .leader-slide {
+    gap: 0;
+  }
+
+  .leader-photo {
+    min-height: 600px;
+    background-size: contain;
+    background-position: center bottom;
+  }
+
+  .leader-copy-card {
+    padding: 2rem 1.4rem;
+  }
+
+  .slider-arrow {
+    top: 32%;
+    font-size: 3rem;
+  }
+
+  .dual-callout-right {
+    min-height: 520px;
+    border-width: 8px;
   }
 }
